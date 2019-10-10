@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block navbar %}
+{% include 'registration/navbar.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid text-center" style="margin-top:75px;">
+    <div class="row content">
+        <div class="col-xl-4 text-left">
+            {% block left %}
+            {% endblock %}
+        </div>
+        <div class="col-xl-4 text-left">
+            {% block center %}
+            {% endblock %}
+        </div>
+        <div class="col-xl-4 sidenav">
+            {% block right %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include 'registration/footer.html' %}
+{% endblock %}

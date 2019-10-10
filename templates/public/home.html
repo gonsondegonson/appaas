@@ -1,0 +1,12 @@
+{% extends 'public/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block center %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+{% else %}
+  <p>You are not logged in, pringao</p>
+  <p>STATIC_ROOT: {{ mySet }}</p>
+{% endif %}
+{% endblock %}

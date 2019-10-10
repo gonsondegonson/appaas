@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+        APPaaS - Servicio de aplicaciones on-line en la nube
+        {% endblock %}
+    </title>
+	<link href="{% static "bootstrap/4.1.1/css/bootstrap.min.css" %}" rel="stylesheet">
+	<link href="{% static "font-awesome/5.0.13/css/fontawesome-all.css" %}" rel="stylesheet">
+	<link href="{% static "menus.css" type="text/css" %}" rel="stylesheet">
+	<link href="{% static "appaas.css" type="text/css" %}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="{% static "bootstrap/4.1.1/js/bootstrap.min.js" %}"></script>
+<!--	<script src="https://kit.fontawesome.com/b276b7e4d4.js" crossorigin="anonymous"></script> -->
+
+    <script type="text/javascript">
+        function fromPosition(Pstring, Pposition) {
+            var = Pstring.substring(Pposition);
+        }
+    </script>
+</head>
+<body>
+    {% block header %}
+    {% endblock %}
+
+    {% block navbar %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'registration/base.html' %}
+
+{% block center %}
+<div class="myContactMessage text-justify">
+<h5>Este es mi Login</h5>
+<form method="post" action="/admin/login/?next=/admin/Private/customuser/" class="post-form">
+{% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ form.username.errors }}
+        <label for="{{ form.username.id_for_label }}" style="width:100px">Usuario:</label>
+        {{ form.username }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.password.errors }}
+        <label for="{{ form.password.id_for_label }}" style="width:100px">Contraseña:</label>
+        {{ form.password }}
+    </div>
+    <button type="submit" class="save btn btn-outline-success" data-toggle="tooltip" title="Enviar Credenciales">Enviar</button>
+    <a href="/" role="button" class="save btn btn-outline-info" data-toggle="tooltip" title="Volver a la página principal">Volver</a>
+</form>
+</div>
+{% endblock %}
